@@ -78,8 +78,8 @@ All targets in http://localhost:9090/targets should be **UP** and **green**.
 
 ## Docker Tips
 2 ui tools for docker:
--docker-visualizer
--portainer
+- docker-visualizer
+- portainer
 
 
 At any point, you can always remove all containers and start over.
