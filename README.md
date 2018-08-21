@@ -38,21 +38,22 @@ docker stack deploy -c docker-compose.yml mon
 ```
 
 ## Browse Prometheus
-
-Open your browser on http://localhost:9090 and select Status → Targets
+Open your browser :  http://localhost:9090 
+select Status → Targets
 
 Here we can see that Prometheus can only reach 2 out of the 4 targets we told
 it to poll.
-
-![](./img/prometheus_targets_before.png)
-
-### Prometheus Graphs
-
-You should be able to select "Graph" in Prometheus' UI at http://localhost:9090
-and see a long list of metrics in the drop-down.
-
+select  "Graph" → see a long list of metrics in the drop-down. click execute
 These metrics are coming from the container named "node exporter" which
 produces OS-level metrics for Prometheus to poll.
+![](./img/prometheus_targets_before.png)
+
+ 
+## Browse Grafana
+Open your browser : http://0.0.0.0:3000/
+login with admin admin
+
+
 
 ![](./img/prometheus_graphs.png)
 
