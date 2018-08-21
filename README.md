@@ -77,6 +77,10 @@ You should have a docker-compose.yml file that includes:
 All targets in http://localhost:9090/targets should be **UP** and **green**.
 
 ## Docker Tips
+2 ui tools for docker:
+-docker-visualizer
+-portainer
+
 
 At any point, you can always remove all containers and start over.
 Depending if you're using Swarm Mode or not, to REMOVE the stack, run:
