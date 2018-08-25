@@ -54,9 +54,10 @@ click metrics
 8. click console
 9. click graph
 10. choose 15m
-10. click add graph
-11. refresh every minute to see a change.
-12. repeat few times 6-10
+11. add formula in textbox above (*10 for instance)
+12. refresh every minute to see a change.
+13. click add graph
+14. repeat few times 6-10
 
 ![](./img/prometheus_targets_before.png)
 
