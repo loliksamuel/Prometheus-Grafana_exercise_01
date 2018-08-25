@@ -44,7 +44,7 @@ docker stack deploy -c docker-compose.yml mon
 ## Browse Prometheus - leading open source software for monitoring / alerting (built at SoundCloud in 2012)(prometheus.io)
 1. Open your browser :  http://localhost:9090 
 2. click Status → Targets 
-3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll.
+3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll (in prometheus.yml)
 4. click Graph to see the build-in graph visualization
 5. see a long list of metrics in the drop-down. (These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll)
 6. choose a metrics
