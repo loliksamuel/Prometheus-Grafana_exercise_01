@@ -26,11 +26,10 @@ cd prom_exercise_01
 
 ```
 
-2. Now you can either use Native Docker or Docker Swarm Mode.
-DO NOT run them both! (See below how to find out if you're using Swarm...)
+2. choose 1 from 2 option :
 
 ```sh
-docker-compose up
+docker-compose up -d
 
 # OR,
 
@@ -38,14 +37,10 @@ docker stack deploy -c docker-compose.yml mon
 ```
 
 ## Browse Prometheus
-Open your browser :  http://localhost:9090 
-select Status → Targets
-
-Here we can see that Prometheus can only reach 2 out of the 4 targets we told
-it to poll.
-select  "Graph" → see a long list of metrics in the drop-down. click execute
-These metrics are coming from the container named "node exporter" which
-produces OS-level metrics for Prometheus to poll.
+1. Open your browser :  http://localhost:9090 
+2. click Status → Targets : Here we can see that Prometheus can only reach 2 out of the 4 targets we told it to poll.)
+3. click Graph  :→ see a long list of metrics in the drop-down. 
+4. click execute : These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll.
 ![](./img/prometheus_targets_before.png)
 
  
