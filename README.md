@@ -35,18 +35,27 @@ docker-compose up -d
 
 docker stack deploy -c docker-compose.yml mon
 ```
-
-## Browse Prometheus
-1. Open your browser :  http://localhost:9090 
-2. click Status → Targets : Here we can see that Prometheus can only reach 2 out of the 4 targets we told it to poll.)
-3. click Graph  :→ see a long list of metrics in the drop-down. 
-4. click execute : These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll.
-![](./img/prometheus_targets_before.png)
-
- 
 ## Browse Grafana
 Open your browser : http://0.0.0.0:3000/
 login with admin admin
+
+## Browse Prometheus
+1. Open your browser :  http://localhost:9090 
+2. click Status → Targets 
+3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll.
+4. click Graph  
+5. see a long list of metrics in the drop-down. (These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll)
+6. choose a metrics
+7. click execute 
+8. click console
+9. click graph
+10. choose 15m
+10. click add graph
+11. refresh every minute to see a change.
+12. repeat few times 6-10
+
+![](./img/prometheus_targets_before.png)
+
 
 
 
