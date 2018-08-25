@@ -10,6 +10,21 @@ volumes:
 
 services:
 
+  node-exporter:
+    image: prom/node-exporter:v0.15.1
+    ports:
+      - 9100:9100
+    volumes:
+      - /proc:/host/proc
+      - /sys:/host/sys
+      - /:/rootfs
+    command:
+      - "--path.procfs=/host/proc"
+      - "--path.sysfs=/host/sys"
+      - "--collector.textfile.directory=/etc/node-exporter/"
+      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+
+
 
 
   prometheus:
@@ -27,19 +42,6 @@ services:
 
 
 
-  node-exporter:
-    image: prom/node-exporter:v0.15.1
-    ports:
-      - 9100:9100
-    volumes:
-      - /proc:/host/proc
-      - /sys:/host/sys
-      - /:/rootfs
-    command:
-      - "--path.procfs=/host/proc"
-      - "--path.sysfs=/host/sys"
-      - "--collector.textfile.directory=/etc/node-exporter/"
-      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
 
 
 

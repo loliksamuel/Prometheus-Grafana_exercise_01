@@ -35,19 +35,17 @@ docker-compose up -d
 
 docker stack deploy -c docker-compose.yml mon
 ```
-## Browse Grafana -   leading open source software for time series analytics (grafana.com)
-Open your browser : http://0.0.0.0:3000/
-login with admin admin
 
 ## Browse node-exporter
-Open browser : http://localhost:9100/
-click metrics
+1. Open browser : http://localhost:9100/
+2. click metrics
+3. refresh and see the change values
 
 ## Browse Prometheus - leading open source software for monitoring / alerting (built at SoundCloud in 2012)(prometheus.io)
 1. Open your browser :  http://localhost:9090 
 2. click Status → Targets 
 3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll.
-4. click Graph  
+4. click Graph to see the build-in graph visualization
 5. see a long list of metrics in the drop-down. (These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll)
 6. choose a metrics
 7. click execute 
@@ -56,8 +54,27 @@ click metrics
 10. choose 15m
 11. add formula in textbox above (*10 for instance)
 12. refresh every minute to see a change.
-13. click add graph
-14. repeat few times 6-10
+13. repeat few times 6-10
+
+## Browse Grafana -   leading open source software for time series analytics. it has much more beautiful graphs then prometheus (grafana.com) 
+1. Open your browser : http://0.0.0.0:3000/
+2. login with admin admin
+3. add data source 
+4. set name = monitoring_1
+5. choose type=prometheus
+6. set url=http://prometheus:9090/
+7. set access= proxy
+8. click save and test
+9. click data source → monitoring_1
+10. verify it exists
+11. click dashboard → new → graph 
+12. click edit and set a metrics or a query u choose from prometheus(like go_gc_duration_seconds_count or node_cpu)
+13. set last 15 minutes (above)
+14. see the graph now :-)
+15. click add row
+15. repeat few times 12-15 
+16. ctrl+s to save the dashboard as dashboard_1
+
 
 ![](./img/prometheus_targets_before.png)
 
