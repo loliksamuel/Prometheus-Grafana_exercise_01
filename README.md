@@ -35,11 +35,15 @@ docker-compose up -d
 
 docker stack deploy -c docker-compose.yml mon
 ```
-## Browse Grafana
+## Browse Grafana -   leading open source software for time series analytics (grafana.com)
 Open your browser : http://0.0.0.0:3000/
 login with admin admin
 
-## Browse Prometheus
+## Browse node-exporter
+Open browser : http://localhost:9100/
+click metrics
+
+## Browse Prometheus - leading open source software for monitoring / alerting (built at SoundCloud in 2012)(prometheus.io)
 1. Open your browser :  http://localhost:9090 
 2. click Status → Targets 
 3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll.

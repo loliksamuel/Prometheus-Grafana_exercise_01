@@ -9,6 +9,9 @@ volumes:
 #    driver: overlay
 
 services:
+
+
+
   prometheus:
     image: prom/prometheus:v2.0.0
     ports:
@@ -21,6 +24,8 @@ services:
       - '--storage.tsdb.path=/prometheus'
     depends_on:
       - node-exporter
+
+
 
   node-exporter:
     image: prom/node-exporter:v0.15.1
@@ -35,6 +40,9 @@ services:
       - "--path.sysfs=/host/sys"
       - "--collector.textfile.directory=/etc/node-exporter/"
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+
+
+
 
   grafana:
     image: grafana/grafana:4.3.2
