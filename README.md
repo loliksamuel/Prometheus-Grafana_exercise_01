@@ -89,7 +89,7 @@ docker stack deploy -c docker-compose.yml mon
 c
 1. Add the cAdvisor exporter from https://github.com/google/cadvisor
 2. Add a MySQL container to docker-compose.yml
-3. Add a MySQL exporter for Prometheus 
+3. Add a MySQL exporter for Prometheus  
 
 ## Expected Solution
 
