@@ -40,8 +40,9 @@ docker stack deploy -c docker-compose.yml mon
 1. Open browser : http://localhost:9100/
 2. click metrics
 3. refresh and see the change values
-   of machine metrics. node exporter will export these metrics to prometheus
-   there is an exporter for each service: mysql-exporter, node-exporter etc...
+   of machine metrics. 
+   prometheus server takes help from various exporters to collect metrics (Pull mechanism) 
+    (there is an exporter for each service: mysql-exporter, node-exporter etc...)
 
 ## Browse Prometheus - leading open source software for monitoring / alerting (built at SoundCloud in 2012)(prometheus.io)
 1. Open your browser :  http://localhost:9090 
@@ -86,10 +87,9 @@ docker stack deploy -c docker-compose.yml mon
 ![](./img/prometheus_graphs.png)
 
 ## Exercise
-c
 1. Add the cAdvisor exporter from https://github.com/google/cadvisor
 2. Add a MySQL container to docker-compose.yml
-3. Add a MySQL exporter for Prometheus  
+3. Add a MySQL exporter for Prometheus     
 
 ## Expected Solution
 
@@ -97,10 +97,9 @@ You should have a docker-compose.yml file that includes:
 
 - Prometheus
 - MySQL
-  exporters - # prometheus server takes help from various exporters to collect metrics (Pull mechanism) exapmles: Node Exporter, cadvisor, mysqlexporter etc...
-- Node Exporter 
-- cAdvisor # this exporter collect from  docker deamon the metrics of all running containers and send it to prometheus
-- MySQL Exporter
+- Node Exporter  # exporter for node metrics
+- cAdvisor       # exporter for containers that collect from  docker deamon the metrics of all running containers and send it to prometheus
+- MySQL Exporter # exporter for mysql metrics
 
 All targets in http://localhost:9090/targets should be **UP** and **green**.
 
