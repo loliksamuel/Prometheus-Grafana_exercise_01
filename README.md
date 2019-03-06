@@ -45,10 +45,10 @@ docker stack deploy -c docker-compose.yml mon
     (there is an exporter for each service: mysql-exporter, node-exporter etc...)
 
 ## Browse Prometheus.io - leading open source software for scraping/querying/graphing/monitoring/alerting timeseries data
-1. Open your browser :  http://localhost:9090 
-2.1 click Status → Configuratoin (u can configure rules/alerting/scraping ) 
-2.2 click Status → Targets 
-2.3 click Status → Rule (example rules file with alert is configure same as recording rules with  alert.rules.yml file)
+- Open your browser :  http://localhost:9090 
+- click Status → Configuratoin (u can configure rules/alerting/scraping ) 
+2. click Status → Targets 
+2. click Status → Rule (example rules file with alert is configure same as recording rules with  alert.rules.yml file)
 ```sh
 groups:
 - name: rule_example
