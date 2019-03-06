@@ -50,7 +50,7 @@ docker stack deploy -c docker-compose.yml mon
 3. click Status → Rule (example rules file with alert is configure same as recording rules)
 ```sh
 groups:
-- name: example
+- name: rule_example
   rules:
   - alert: HighErrorRate
     expr: job:request_latency_seconds:mean5m{job="myjob"} > 0.5
