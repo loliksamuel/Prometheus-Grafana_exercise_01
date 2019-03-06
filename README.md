@@ -46,9 +46,7 @@ docker stack deploy -c docker-compose.yml mon
 
 ## Browse Prometheus.io - leading open source software for scraping/querying/graphing/monitoring/alerting timeseries data
 0. Open your browser :  http://localhost:9090 
-1. click Status → Configuration (u can configure rules/alerting/scraping in prometheus.yml) 
-2. click Status → Targets (configured in prometheus.yml)
-2. click Status → Rule (example rules file with alert is configure same as recording rules with  alert.rules.yml file)
+1. click Status → Rule (example rules file with alert is configure same as recording rules with  alert.rules.yml file)
 ```sh
 groups:
 - name: rule_example
@@ -60,7 +58,9 @@ groups:
       severity: page
     annotations:
       summary: High request latency
-```      
+``` 
+2. click Status → Configuration (u can configure rules/alerting/scraping in prometheus.yml) 
+2. click Status → Targets (configured in prometheus.yml)
 3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll (in prometheus.yml)
 4. click Graph to see the build-in graph visualization
 5. see a long list of metrics in the drop-down. (These metrics are coming from the container named "node exporter" which produces OS-level metrics for Prometheus to poll)
