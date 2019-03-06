@@ -44,7 +44,7 @@ docker stack deploy -c docker-compose.yml mon
    prometheus server takes help from various exporters to collect metrics (Pull mechanism) 
     (there is an exporter for each service: mysql-exporter, node-exporter etc...)
 
-## Browse Prometheus - leading open source software for monitoring / alerting (built at SoundCloud in 2012)(prometheus.io)
+## Browse Prometheus.io - leading open source software for scraping/querying/graphing/monitoring/alerting timeseries data
 1. Open your browser :  http://localhost:9090 
 2. click Status → Targets 
 3. validate that Prometheus can reach (State up) only 2 out of the 4 targets we told it to poll (in prometheus.yml)
@@ -59,7 +59,7 @@ docker stack deploy -c docker-compose.yml mon
 12. refresh every minute to see a change.
 13. repeat few times 6-10
 
-## Browse Grafana -   leading open source software for time series analytics. it has much more beautiful graphs then prometheus (grafana.com) 
+## Browse grafana.com - leading open source software for time series analytics. has better graphs/dashboard/visualization suite then prometheus 
 1. Open your browser : http://0.0.0.0:3000/
 2. login with admin admin
 3. add data source 
