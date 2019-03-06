@@ -47,9 +47,7 @@ docker stack deploy -c docker-compose.yml mon
 ## Browse Prometheus.io - leading open source software for scraping/querying/graphing/monitoring/alerting timeseries data
 1. Open your browser :  http://localhost:9090 
 2. click Status → Targets 
-3. click Status → Rule 
-  - Alerting rules are configured in Prometheus in the same way as recording rules.
-  - An example rules file with an alert would be:
+3. click Status → Rule (example rules file with alert is configure same as recording rules)
 ```sh
 groups:
 - name: example
