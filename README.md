@@ -69,7 +69,7 @@ groups:
 8. click console
 9. click graph
 10. choose 15m
-11. add formula in textbox above (*10 for instance)
+11. add formula in textbox above (ex.  go_goroutines*10)
 12. refresh every minute to see a change.
 13. repeat few times 6-10
 
